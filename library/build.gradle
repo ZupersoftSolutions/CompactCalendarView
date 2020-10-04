@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'idea'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.ZupersoftSolutions'
 
 idea {
     module {
@@ -17,14 +20,13 @@ repositories {
 
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 29
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 200
+        versionName "2.0.0"
     }
     buildTypes {
         release {
@@ -36,9 +38,9 @@ android {
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    api 'com.android.support:appcompat-v7:27.1.1'
+    api 'androidx.appcompat:appcompat:1.2.0'
     //mockito dependencies
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     testImplementation 'org.mockito:mockito-core:2.15.0'
 }
 
